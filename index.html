@@ -4,7 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortnite Dream Locker</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/design.css">
+    
+    <style>
+        .gallery-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 25px !important;
+            padding: 20px 0 60px 0 !important;
+            max-width: 1000px !important;
+            margin: 0 auto !important;
+        }
+        
+        .character-card {
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important;
+        }
+        
+        .card-image {
+            flex-shrink: 0 !important;
+            height: 200px !important;
+        }
+        
+        .card-content {
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        
+        .btn-details {
+            margin-top: auto !important;
+        }
+        
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                max-width: 700px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr !important;
+                max-width: 350px !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -14,7 +60,7 @@
                 <span class="brand-text">Fortnite Dream Locker</span>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html"> class="active">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="details.html">Details</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="newSkin.html">New Skins</a></li>
@@ -24,127 +70,129 @@
     
     <main class="container">
         <header class="page-header">
-            <h1> Your Dream Locker</h1>
+            <h1>Your Dream Locker</h1>
             <p>Discover your favorite Fortnite skins and create your ultimate dream locker!</p>
         </header>
 
         <section class="search-section">
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search for skins..." onkeyup="filterSkins()">
-
-                 <button class="search-button">Search</button>
-            <div>
-            </div class="filter-tag">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for skins...">
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="filter-tags">
                 <span class="filter-tag active">All</span>
                 <span class="filter-tag">Legendary</span>
                 <span class="filter-tag">Epic</span>
                 <span class="filter-tag">Rare</span>
                 <span class="filter-tag">Common</span>
-             </div>
+            </div>
         </section>
+
         <!-- Character Gallery Section -->
-         <!-- Renegade Raider -->
-        <section class="character-gallery">
-            <div class="character-card legendary">
-                <div class="character-image">
-                    <img src="Renegade_Raider_29_-_Outfit_-_Fortnite.webp" alt="Renegade Raider">
-                    <span class="rarity-label">Rare</span>
+        <section class="gallery-grid">
+            
+            <!-- Renegade Raider -->
+            <div class="character-card renegade">
+                <div class="card-image">
+                    <img src="assets/images/Renegade_Raider_29_-_Outfit_-_Fortnite.webp" alt="Renegade Raider">
+                    <span class="rarity-badge">Rare</span>
                 </div>
-                <div class="character-info">
+                <div class="card-content">
                     <h3>Renegade Raider</h3>
-                    <div class="character-details">
-                        <span class="detail-tag">Universe: Fortnite</span>
-                        <span class="detail-tag">Role: Comic Relief</span>
-                        <span class="detail-tag">Rarity: Rare</span>
-                        <span class="detail-tag">Release Date: Season 1</span>
+                    <div class="card-details">
+                        <span class="detail-tag">Fortnite</span>
+                        <span class="detail-tag">OG Survivor</span>
+                        <span class="detail-tag">Power: 9/10</span>
+                        <span class="detail-tag">Human</span>
                     </div>
-                    <p class="character-description">The Renegade Raider is a rare outfit in Fortnite, known for its unique design and early availability in the game.</p>  
-                    <a href="details.html?skin=Renegade_Raider" class="details-button">View Details</a>
+                    <p class="card-description">The Renegade Raider is a rare outfit in Fortnite, known for its unique design and early availability in the game.</p>  
+                    <a href="details.html?skin=Renegade_Raider" class="btn-details">View Details →</a>
                 </div>
             </div>
 
             <!-- Kratos -->
-             <div class="character-card legendary">
-                <div class="character-image">
-                    <img src="Kratos_29_-_Outfit_-_Fortnite.webp" alt="Kratos">
-                    <span class="rarity-label">Gaming Legends Series</span>
+            <div class="character-card kratos">
+                <div class="card-image">
+                    <img src="assets/images/Kratos_29_-_Outfit_-_Fortnite.webp" alt="Kratos">
+                    <span class="rarity-badge">Gaming Legend Series</span>
                 </div>
-                <div class="character-info">
-                    <h3>Kratos</h3>
-                    <div class="character-details">
-                        <span class="detail-tag">Universe: Fortnite</span>
-                        <span class="detail-tag">Role: Comic Relief</span>
-                        <span class="detail-tag">Rarity: Gaming Legends Series</span>
-                        <span class="detail-tag">Release Date: Chapter 2, Season 5</span>
+                <div class="card-content">
+                    <h3> Kratos</h3>
+                    <div class="card-details">
+                        <span class="detail-tag">God of War</span>
+                        <span class="detail-tag">Ghost of Sparta</span>
+                        <span class="detail-tag">Power: 10/10</span>
+                        <span class="detail-tag">Demigod</span>
                     </div>
-                    <p class="character-description">The Kratos is a gaming legends series outfit in Fortnite, known for its unique design and availability in Chapter 2, Season 5.</p>
-                    <a href="details.html?skin=Kratos" class="details-button">View Details</a>
+                    <p class="card-description">The Kratos is a gaming legends series outfit in Fortnite, known for its unique design and availability in Chapter 2, Season 5.</p>
+                    <a href="details.html?skin=Kratos" class="btn-details">View Details →</a>
                 </div>
             </div>
 
-            <!-- Chani -->
-             <div class="character-card legendary">
-                <div class="character-image">
-                    <img src="Chani_29_-_Outfit_-_Fortnite.webp" alt="Chani">
-                    <span class="rarity-label">Epic</span>
+            <!--Chani -->
+            <div class="character-card chani">
+                <div class="card-image">
+                    <img src="assets/images/Chani_29_-_Outfit_-_Fortnite.webp" alt="Chani">
+                    <span class="rarity-badge">Epic</span>
                 </div>
-                <div class="character-info">
+                <div class="card-content">
                     <h3>Chani</h3>
-                    <div class="character-details">
-                        <span class="detail-tag">Universe: Fortnite</span>
-                        <span class="detail-tag">Role: Comic Relief</span>
-                        <span class="detail-tag">Rarity: Epic</span>
-                        <span class="detail-tag">Release Date: Chapter 2, Season 8</span>
+                    <div class="card-details">
+                        <span class="detail-tag">Dune Universe</span>
+                        <span class="detail-tag">Desert Warrior</span>
+                        <span class="detail-tag">Power: 8/10</span>
+                        <span class="detail-tag">Human</span>
                     </div>
-                    <p class="character-description">The Chani is a rare outfit in Fortnite, known for its unique design.</p>  
-                    <a href="details.html?skin=Chani" class="details-button">View Details</a>
+                    <p class="card-description">The Chani is a rare outfit in Fortnite, known for its unique design.</p>  
+                    <a href="details.html?skin=Chani" class="btn-details">View Details →</a>
                 </div>
             </div>
-
-            <1!-- HeadHunter Prime -->
-             <div class="character-card legendary">
-                <div class="character-image">
-                    <img src="HeadHunter_Prime_29_-_Outfit_-_Fortnite.webp" alt="HeadHunter Prime">
-                    <span class="rarity-label">Uncommon</span>
+            
+            <!-- HeadHunter Prime -->
+            <div class="character-card headhunter">
+                <div class="card-image">
+                    <img src="assets/images/HeadHunter_Prime_29_-_Outfit_-_Fortnite.webp" alt="HeadHunter Prime">
+                    <span class="rarity-badge">Uncommon</span>
                 </div>
-                <div class="character-info">
-                    <h3>HeadHunter Prime</h3>
-                    <div class="character-details">
-                        <span class="detail-tag">Universe: Fortnite</span>
-                        <span class="detail-tag">Role: Comic Relief</span>
-                        <span class="detail-tag">Rarity: Uncommon</span>
-                        <span class="detail-tag">Release Date: Chapter 2, Season 4</span>
+                <div class="card-content">
+                    <h3> HeadHunter Prime</h3>
+                    <div class="card-details">
+                        <span class="detail-tag">Fortnite</span>
+                        <span class="detail-tag">Tactical Specialist</span>
+                        <span class="detail-tag">Power: 8/10</span>
+                        <span class="detail-tag">Human</span>
                     </div>
-                    <p class="character-description">The HeadHunter Prime is an uncommon outfit in Fortnite, known for its unique design and availability in Chapter 2, Season 4.</p>
-                    <a href="details.html?skin=HeadHunter_Prime" class="details-button">View Details</a>
+                    <p class="card-description">The HeadHunter Prime is an uncommon outfit in Fortnite, known for its unique design and availability in Chapter 2, Season 4.</p>
+                    <a href="details.html?skin=HeadHunter_Prime" class="btn-details">View Details →</a>
                 </div>
             </div>
-
 
             <!-- Black Knight -->
-             <div class="character-card legendary">
-                <div class="character-image">
-                    <img src="Black_Knight_29_-_Outfit_-_Fortnite.webp" alt="Black Knight">
-                    <span class="rarity-label">Legendary</span>
+            <div class="character-card black-knight">
+                <div class="card-image">
+                    <img src="assets/images/Black_Knight_29_-_Outfit_-_Fortnite.webp" alt="Black Knight">
+                    <span class="rarity-badge"> Legendary</span>
                 </div>
-                <div class="character-info">
+                <div class="card-content">
                     <h3>Black Knight</h3>
-                    <div class="character-details">
-                        <span class="detail-tag">Universe: Fortnite</span>
-                        <span class="detail-tag">Role: Comic Relief</span>
-                        <span class="detail-tag">Rarity: Legendary</span>
-                        <span class="detail-tag">Release Date: Season 2</span>
+                    <div class="card-details">
+                        <span class="detail-tag">Fortnite</span>
+                        <span class="detail-tag">Dark Royalty</span>
+                        <span class="detail-tag">Power: 10/10</span>
+                        <span class="detail-tag">Knight</span>
                     </div>
-                    <p class="character-description">The Black Knight is a legendary outfit in Fortnite, known for its unique design and availability in Chapter 2, Season 5.</p>  
-                    <a href="details.html?skin=Black_Knight" class="details-button">View Details</a>
+                    <p class="card-description">The Black Knight is a legendary outfit in Fortnite, known for its unique design and availability in Chapter 2, Season 5.</p>  
+                    <a href="details.html?skin=Black_Knight" class="btn-details">View Details →</a>
                 </div>
             </div>
+
         </section>        
-</main>
+    </main>
 
     <footer class="footer">
         <p>Dream Locker Gallery build your dream team!</p>
         <p class="footer-small">All fortnite skins are for educational purposes only.</p>
     </footer>
+
 </body>
 </html>
