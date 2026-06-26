@@ -19,6 +19,13 @@
     --radius: 12px;
 }
 
+.form-header h1 {
+    font-size: 2.8rem;
+    color: #b266ff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -42,11 +49,14 @@ body {
 
 .navbar {
     background: rgba(0, 0, 0, 0.95);
-    border-bottom: 2px solid var(--fortnite-blue);
+    border-bottom: 2px solid transparent;
     padding: 16px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-image: linear-gradient(135deg, #451993, #fb7d23);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
 .nav-container {
@@ -72,8 +82,11 @@ body {
 }
 
 .brand-text {
-    color: var(--fortnite-gold);
     letter-spacing: 1px;
+    background: linear-gradient(135deg, #00d4ff, #b266ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .nav-links {
@@ -281,7 +294,8 @@ body {
 
 
 .card-image {
-    height: 150px;
+    height: 180px;
+    padding: 10px;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -293,8 +307,9 @@ body {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: all 0.3s ease;
+    transform: scale(0.9);
 }
 
 .character-card:hover .card-image img {
@@ -491,4 +506,13 @@ body {
     color: var(--text-light);
     border-color: var(--fortnite-blue);
     background: rgba(0, 212, 255, 0.05);
+}
+
+.profile-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #d4783c, #c49a6c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
