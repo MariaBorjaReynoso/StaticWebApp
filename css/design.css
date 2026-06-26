@@ -1,21 +1,17 @@
 :root {
-    /* ===== MAIN BACKGROUNDS ===== */
     --primary-dark: #000000;
     --primary-mid: #0a0a0a;
     --primary-light: #0d0d0d;
     
-    /* ===== ACCENT COLORS ===== */
     --fortnite-blue: #00d4ff;
     --fortnite-gold: #c9a84c;
     --fortnite-red: #b22222;
     --fortnite-purple: #2a0a2a;
     --fortnite-orange: #d4783c;
     
-    /* ===== TEXT COLORS ===== */
     --text-light: #f0ece4;
     --text-muted: #a89f94;
     
-    /* ===== CARD & UI ===== */
     --card-bg: rgba(20, 15, 12, 0.85);
     --card-border: rgba(200, 170, 150, 0.15);
     --border-glow: rgba(0, 212, 255, 0.2);
@@ -23,7 +19,6 @@
     --radius: 12px;
 }
 
-/* ===== RESET & BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +39,7 @@ body {
     padding: 0 20px;
 }
 
-/* ===== NAVIGATION ===== */
+
 .navbar {
     background: rgba(0, 0, 0, 0.95);
     border-bottom: 2px solid var(--fortnite-blue);
@@ -109,7 +104,7 @@ body {
     border: 1px solid rgba(0, 212, 255, 0.2);
 }
 
-/* ===== HEADER ===== */
+
 .page-header {
     text-align: center;
     padding: 40px 0 20px 0;
@@ -117,7 +112,7 @@ body {
 
 .page-header h1 {
     font-size: 3rem;
-    color: var(--fortnite-gold);
+    color: #b266ff;  
     margin-bottom: 8px;
     letter-spacing: 2px;
 }
@@ -127,7 +122,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* ===== SEARCH BAR ===== */
 .search-section {
     margin: 30px 0 40px 0;
 }
@@ -177,7 +171,7 @@ body {
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
 }
 
-/* ===== FILTER TAGS ===== */
+
 .filter-tags {
     display: flex;
     justify-content: center;
@@ -208,7 +202,7 @@ body {
     border-color: var(--fortnite-blue);
 }
 
-/* ===== GALLERY GRID - 3 on top, 2 on bottom ===== */
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -218,7 +212,7 @@ body {
     margin: 0 auto;
 }
 
-/* ===== CHARACTER CARDS ===== */
+
 .character-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -234,9 +228,8 @@ body {
     box-shadow: 0 8px 30px rgba(0, 212, 255, 0.15);
 }
 
-/* ===== CHARACTER-SPECIFIC CARD ACCENTS ===== */
 
-/* 🏹 Renegade Raider - OG Grit */
+
 .character-card.renegade {
     border-left: 4px solid #8b6b4d;
     box-shadow: 0 0 30px rgba(139, 107, 77, 0.1);
@@ -246,7 +239,7 @@ body {
     box-shadow: 0 0 50px rgba(139, 107, 77, 0.2);
 }
 
-/* 🪓 Kratos - Fire & Rage */
+
 .character-card.kratos {
     border-left: 4px solid #b22222;
     box-shadow: 0 0 30px rgba(178, 34, 34, 0.15);
@@ -256,7 +249,7 @@ body {
     box-shadow: 0 0 50px rgba(178, 34, 34, 0.3);
 }
 
-/* 🏜️ Chani - Desert Mystic */
+
 .character-card.chani {
     border-left: 4px solid #d4783c;
     box-shadow: 0 0 30px rgba(212, 120, 60, 0.15);
@@ -266,7 +259,7 @@ body {
     box-shadow: 0 0 50px rgba(212, 120, 60, 0.25);
 }
 
-/* 🎯 Headhunter Prime - Clean Tech */
+
 .character-card.headhunter {
     border-left: 4px solid #00d4ff;
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
@@ -276,7 +269,7 @@ body {
     box-shadow: 0 0 50px rgba(0, 212, 255, 0.25);
 }
 
-/* ⚔️ Black Knight - Dark Royalty */
+
 .character-card.black-knight {
     border-left: 4px solid #1a0a2a;
     box-shadow: 0 0 30px rgba(26, 10, 42, 0.2);
@@ -286,7 +279,7 @@ body {
     box-shadow: 0 0 50px rgba(106, 13, 173, 0.3);
 }
 
-/* ===== CARD IMAGE ===== */
+
 .card-image {
     height: 150px;
     overflow: hidden;
@@ -308,7 +301,7 @@ body {
     transform: scale(1.05);
 }
 
-/* ===== RARITY BADGES ===== */
+
 .rarity-badge {
     position: absolute;
     top: 10px;
@@ -323,37 +316,37 @@ body {
     border: 1px solid;
 }
 
-/* Renegade Raider - Legendary */
+
 .character-card.renegade .rarity-badge {
     color: #c9a84c;
     border-color: #c9a84c;
 }
 
-/* Chani - Epic */
+
 .character-card.chani .rarity-badge {
     color: #d4783c;
     border-color: #d4783c;
 }
 
-/* Kratos - Legendary */
+
 .character-card.kratos .rarity-badge {
     color: #ff3333;
     border-color: #ff3333;
 }
 
-/* Headhunter Prime - Epic */
+
 .character-card.headhunter .rarity-badge {
     color: #00d4ff;
     border-color: #00d4ff;
 }
 
-/* Black Knight - Legendary */
+
 .character-card.black-knight .rarity-badge {
     color: #9b59b6;
     border-color: #9b59b6;
 }
 
-/* ===== CARD CONTENT ===== */
+
 .card-content {
     padding: 18px;
 }
@@ -404,7 +397,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
-/* ===== FOOTER ===== */
+
 .footer {
     text-align: center;
     padding: 30px 20px;
@@ -420,7 +413,7 @@ body {
     opacity: 0.6;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 992px) {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -468,4 +461,34 @@ body {
     .page-header h1 {
         font-size: 1.6rem;
     }
+}
+
+
+.loadout-icons {
+    display: flex;
+    gap: 12px;
+    padding: 8px 0;
+    margin-bottom: 8px;
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+    flex-wrap: wrap;
+}
+
+.loadout-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+}
+
+.loadout-item:hover {
+    color: var(--text-light);
+    border-color: var(--fortnite-blue);
+    background: rgba(0, 212, 255, 0.05);
 }
