@@ -1,1 +1,2 @@
 # StaticWebApp
+The Fortnite Dream Locker showcases iconic characters from the Fortnite universe.From the OG Renegade Raider to the legendary Kratos an d Black Knight, this gallery celebrates the diverse and colorful roster of skins that have made Fortnite one of the most popular game in the world.
